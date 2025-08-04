@@ -11,7 +11,7 @@ def analyze_with_llama(webpage_data):
 
 URL: {webpage_data['url']}
 Title: {webpage_data['title']}
-Content: {webpage_data['content'][:20000]}
+Content: {webpage_data['content'][:5005]}
 
 Please provide:
 1. Key takeaways (2-3 points)
