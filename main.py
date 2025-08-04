@@ -6,7 +6,8 @@ from config import OLLAMA_BASE_URL, MODEL_NAME
 def analyze_with_llama(webpage_data):
     """Send webpage content to local Llama for analysis"""
     
-    prompt = f"""Analyze this webpage content and suggest what I should note about it: Please dont make anything up
+    prompt = f"""Analyze this webpage content and suggest what I should note about it:
+    Please dont make any assumptions about the content, just analyze it as is.
 
 URL: {webpage_data['url']}
 Title: {webpage_data['title']}
@@ -17,7 +18,7 @@ Please provide:
 2. Notable people or companies mentioned  
 3. Should I reach out or follow up? Why?
 4. Tags for categorization
-5. Give a sample message I can send to my network about this article
+5. sample network message to send
 
 Keep response concise and actionable."""
     
