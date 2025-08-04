@@ -7,16 +7,18 @@ def analyze_with_llama(webpage_data):
     """Send webpage content to local Llama for analysis"""
     
     prompt = f"""Analyze this webpage content and suggest what I should note about it:
+    Please dont make any assumptions about the content, just analyze it as is.
 
 URL: {webpage_data['url']}
 Title: {webpage_data['title']}
-Content: {webpage_data['content'][:2000]}
+Content: {webpage_data['content'][:20000]}
 
 Please provide:
 1. Key takeaways (2-3 points)
 2. Notable people or companies mentioned  
 3. Should I reach out or follow up? Why?
 4. Tags for categorization
+5. sample network message to send
 
 Keep response concise and actionable."""
     
