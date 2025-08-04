@@ -51,13 +51,13 @@ def main():
         print(f"❌ Error: {webpage_data['error']}")
         return
     
-    print(f"📄 Found: {webpage_data['title']}")
-    print(f"📝 Content length: {webpage_data['word_count']} words")
+    print(f"Found: {webpage_data['title']}")
+    print(f"Content length: {webpage_data['word_count']} words")
     
-    print(f"\n🤖 Analyzing with {MODEL_NAME}...")
+    print(f"\nAnalyzing with {MODEL_NAME}...")
     analysis = analyze_with_llama(webpage_data)
     print("\n" + "="*50)
-    print("📋 AI ANALYSIS:")
+    print("AI ANALYSIS:")
     print("="*50)
     print(analysis)
     print("="*50)
